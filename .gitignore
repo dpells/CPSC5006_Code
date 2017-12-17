@@ -1,0 +1,14 @@
+##image files
+*.tiff
+*.png
+*.jpg
+
+##folders
+exprots/
+MathWorks/
+
+##lock files
+*.asv
+
+##text files
+*.txt
