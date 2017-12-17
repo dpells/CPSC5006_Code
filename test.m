@@ -1,7 +1,8 @@
-%encode('dog_632x632.jpg', 'The Roomba vacuum cleaner just beat me to a piece of popcorn I dropped on the floor & this is how the war against the machines begins.', 'outmessage');
-%decode('outmessage.png')
+msg = 'According to me this is a dumb project';
+encodeImprove('dog_632x632.jpg', msg, 'outmessage');
+decodeImprove('outmessage.png')
 
-
+%{
 A = imread('svdCompressIn.png');
 A = double(A);
 %{
@@ -22,3 +23,4 @@ imshow(B)
 B = L * U;
 B = uint8(B);
 imshow(B)
+%}

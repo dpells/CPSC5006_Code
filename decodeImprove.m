@@ -1,4 +1,4 @@
-function [ message ] = decode( file )
+function [ message ] = decodeImprove( file )
 %DECODE Decode a string from the specified image
 %   Pulls a binary string from an image and converts it to an array of 
 %   integers, and then into a character array
@@ -11,10 +11,14 @@ function [ message ] = decode( file )
 
     %pull the binary string from the image
     index = 0;
-    for i = 1:n
-        for j = 1:m
+    for i = 1:8:n
+        for j = 1:8:m
+            for k = 1+(8*i-1):1+(8*i-1)+8
+                for l = 1+(8*j-1):1+(8*j-1)+8
             index = index + 1;
             bin_message(index) = mod(dog(i, j), 2);
+                end
+            end
         end
     end
 
